@@ -1,5 +1,5 @@
 class Hbi < Formula
-  desc ""
+  desc "hey hey hey! program!"
   homepage ""
   url "https://github.com/pd3v/hbi/archive/refs/tags/v0.0.1.tar.gz"
   sha256 "77a2425e7cc1f6a0267780b1af053f41c808b62101112db6ca544a099f0230f5"
@@ -12,7 +12,7 @@ class Hbi < Formula
     # Remove unrecognized options if they cause configure to fail
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
     #system "./configure", "--disable-silent-rules", *std_configure_args
-    system "cmake", "-S", "src/.", "-B", "build", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build/", *std_cmake_args
   end
 
 end
