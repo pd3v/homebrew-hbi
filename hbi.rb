@@ -15,7 +15,7 @@ class Hbi < Formula
     # system "./configure", "--disable-silent-rules", *std_configure_args
     system "mkdir", "build"
     system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
-    system "cd", "build"
+    #system "cd", "build"
     #system "cmake.."
     #system "make"
     system "make", "-C", "build/"
