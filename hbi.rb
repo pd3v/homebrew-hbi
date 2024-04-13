@@ -14,6 +14,7 @@ class Hbi < Formula
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
     # system "./configure", "--disable-silent-rules", *std_configure_args
     system "mkdir", "build"
+    system "mkdir", "bin"
     system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
     #system "cd", "build"
     #system "cmake.."
@@ -22,5 +23,4 @@ class Hbi < Formula
     bin.install "hbi"
     ohai("Ready to rock n' roll!")
   end
-
 end
