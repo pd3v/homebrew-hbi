@@ -14,11 +14,11 @@ class Hbi < Formula
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
     # system "./configure", "--disable-silent-rules", *std_configure_args
     system "mkdir", "build"
+    system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
     system "cd", "build"
-    system "cmake.."
-    system "make"
-    #system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
-    #system "make", "-C", "build/"
+    #system "cmake.."
+    #system "make"
+    system "make", "-C", "build/"
     bin.install "hbi"
     ohai("Ready to rock n' roll!")
   end
