@@ -12,8 +12,9 @@ class Hbi < Formula
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if they cause configure to fail
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
+    system "mk", "build", "cd", "build", "cmake.."
     system "./configure", "--disable-silent-rules", *std_configure_args
-    system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
+    #system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
     #system "make", "-C", "build/"
     bin.install "hbi"
   end
