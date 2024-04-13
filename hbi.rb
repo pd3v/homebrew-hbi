@@ -18,7 +18,7 @@ class Hbi < Formula
     #system "cd", "build"
     #system "cmake.."
     #system "make"
-    system "make", "-C", "build/"
+    system "make", "-C", "bin/"
     bin.install "hbi"
     ohai("Ready to rock n' roll!")
   end
