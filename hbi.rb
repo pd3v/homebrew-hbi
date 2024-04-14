@@ -5,7 +5,7 @@ class Hbi < Formula
   sha256 "77a2425e7cc1f6a0267780b1af053f41c808b62101112db6ca544a099f0230f5"
   license ""
 
-  depends_on "cmake" => :build
+  #depends_on "cmake" => :build
   depends_on "readline" => :recommended
 
   def install
